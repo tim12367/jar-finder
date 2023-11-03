@@ -19,8 +19,17 @@ class ParseJar():
     def doParseAllPath(self, path):
         # 遍歷當前目錄
         for root, dir, files in os.walk(path, topdown=True):  # topdown 是否優先遍歷TOP
-            for f in files:
-                print("root:", root, "files:", f, '\n')
+            for file in files:
+                print("root:", root, "files:", file, '\n')
 
     def doParseJar(self, path):
         print(path)
+
+#main 方法
+def main():
+    parser = ParseJar()
+    parser.doParseJarCurrentFolder()
+
+
+if __name__ == "__main__":
+    main()
